@@ -34,6 +34,9 @@ BOARD_VENDOR := oneplus
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
+# Enable Echo fix
+AUDIO_FEATURE_ENABLED_OP3_SPEAKER_AND_HEADPHONES := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8996
 TARGET_NO_BOOTLOADER := true
