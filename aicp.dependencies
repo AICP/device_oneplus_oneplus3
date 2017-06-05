@@ -38,5 +38,10 @@
     "repository":  "TheMuppets/proprietary_vendor_oneplus",
     "target_path": "vendor/oneplus",
     "branch":      "cm-14.1"
+  },
+  {
+    "repository":  "AOSPA/android_packages_apps_SnapdragonCamera",
+    "target_path": "packages/apps/SnapdragonCamera",
+    "branch":      "nougat-mr2"
   }
 ]
