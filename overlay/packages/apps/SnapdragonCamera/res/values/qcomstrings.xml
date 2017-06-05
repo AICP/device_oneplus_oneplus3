@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (C) 2012-2014, The Linux Foundation. All rights reserved.
-              (C) 2014-2016 The CyanogenMod Project
-              (C) 2017 The LineageOS Project
+    Copyright (c) 2012-2014, The Linux Foundation. All rights reserved.
 
     Not a Contribution.
 
@@ -23,7 +21,14 @@
 <resources>
     <!-- HDR needs 1x frame -->
     <string name="pref_camera_hdr_need_1x_default" translatable="false">false</string>
-    <string name="pref_camera_scenedetect_default" translatable="false">on</string>
-    <string name="pref_camera_dis_default" translatable="false">enable</string>
-    <string name="pref_video_quality_default" translatable="false">1920x1080</string>
+
+    <!-- Default auto exposure setting. Do not translate. -->
+    <string name="pref_camera_autoexposure_default">center-weighted</string>
+
+    <!-- Default face  detection setting. -->
+    <string name="pref_camera_facedetection_default" translatable="false">on</string>
+
+    <!-- Default noise reduction setting. Do not translate. -->
+    <string name="pref_camera_noise_reduction_default">high-quality</string>
+
 </resources>
