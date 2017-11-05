@@ -150,6 +150,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    libbt-vendor \
     android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth@1.0-impl \
     libbt-vendor
@@ -162,7 +163,10 @@ PRODUCT_PACKAGES += \
     Snap \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
-    android.hardware.camera.provider@2.4-impl
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
+    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.device@1.0_vendor
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -187,8 +191,24 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8996 \
     memtrack.msm8996 \
     libgenlock \
-    liboverlay \
     libtinyxml
+    libdisplayconfig \
+    liboverlay \
+    libqdMetaData.system \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.configstore@1.0-service \
+    android.hardware.broadcastradio@1.0-impl \
+    vendor.display.color@1.0-service \
+    vendor.display.color@1.0-impl
+
+PRODUCT_PROPERTY_OVERRIDES  += \
+    ro.opengles.version=196610
 
 # Display calibration
 PRODUCT_PACKAGES += \
@@ -210,7 +230,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service \
     fingerprint.msm8996
-#    OneplusPocketMode
+#   OneplusPocketMode
 
 # For config.fs
 PRODUCT_PACKAGES += \
@@ -320,7 +340,8 @@ PRODUCT_PACKAGES += \
     power.msm8996
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.xml:system/etc/powerhint.xml
+    $(LOCAL_PATH)/configs/powerhint.xml:system/etc/powerhint.xml \
+    $(LOCAL_PATH)/configs/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perfboostsconfig.xml \
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -359,6 +380,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.snapshot_enabled=1 \
     persist.radio.snapshot_timer=3
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.is_wps_enabled=true \
     persist.radio.RATE_ADAPT_ENABLE=1 \
@@ -368,10 +394,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.VT_ENABLE=1 \
     persist.radio.VT_HYBRID_ENABLE=1 \
     persist.radio.data_con_rprt=true
-
-# Sensors
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
