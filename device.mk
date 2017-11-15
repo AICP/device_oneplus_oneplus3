@@ -26,7 +26,7 @@ $(call inherit-product, vendor/oneplus/oneplus3/oneplus3-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
-#    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lineage
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -224,13 +224,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Doze mode
 #PRODUCT_PACKAGES += \
-#    OneplusDoze
+    OneplusDoze
 
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service \
     fingerprint.msm8996
-#   OneplusPocketMode
+    OneplusPocketMode
 
 # For config.fs
 PRODUCT_PACKAGES += \
