@@ -228,6 +228,11 @@ PRODUCT_COPY_FILES += \
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl
+   
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0-java
 
 # IPv6
 PRODUCT_PACKAGES += \
