@@ -3,5 +3,5 @@
 #
 198050 https://review.lineageos.org packages/apps/Nfc
 200040 https://review.lineageos.org hardware/interfaces
-54436  https://gerrit.aicp-rom.com  bionic
-57664  https://gerrit.aicp-rom.com  vendor/aicp
+198621 https://review.lineageos.org bionic
+198696 https://review.lineageos.org vendor/aicp
