@@ -28,6 +28,10 @@ PRODUCT_DEVICE := oneplus3
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="Darragh McGee (DarkExistence)"
+
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 TARGET_VENDOR := oneplus
