@@ -20,11 +20,6 @@
     "branch": "8.1"
   },
   {
-    "repository": "GZOSP/hardware_qcom_display",
-    "target_path": "hardware/qcom/display-caf/msm8996",
-    "branch": "8.1-caf-8996"
-  },
-  {
     "repository": "GZOSP/device_qcom_sepolicy",
     "target_path": "device/qcom/sepolicy",
     "branch": "8.1"
