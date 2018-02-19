@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2015 The CyanogenMod Project
- *               2017-2018 The LineageOS Project
+ *               2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,10 +25,10 @@ import android.hardware.SensorManager;
 import android.os.SystemClock;
 import android.util.Log;
 
-public class PickupSensor implements SensorEventListener {
+public class TiltSensor implements SensorEventListener {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "PickupSensor";
+    private static final String TAG = "TiltSensor";
 
     private static final int BATCH_LATENCY_IN_MS = 100;
     private static final int MIN_PULSE_INTERVAL_MS = 2500;
@@ -39,10 +39,10 @@ public class PickupSensor implements SensorEventListener {
 
     private long mEntryTimestamp;
 
-    public PickupSensor(Context context) {
+    public TiltSensor(Context context) {
         mContext = context;
         mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
-        mSensor = Utils.getSensor(mSensorManager, "com.oneplus.sensor.pickup");
+        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_TILT_DETECTOR);
     }
 
     @Override
