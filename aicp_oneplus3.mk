@@ -33,3 +33,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 BUILD_FINGERPRINT := "OnePlus/OnePlus3/OnePlus3:9/PKQ1.181203.001/1905251415:user/release-keys"
 
 TARGET_VENDOR := oneplus
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="Darragh McGee (DarkExistence)"
